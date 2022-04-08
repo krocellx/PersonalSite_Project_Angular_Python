@@ -26,5 +26,5 @@ class ExamSchema(Schema):
     updated_at = fields.DateTime()
     last_updated_by = fields.Str()
 
-if __main__:
+if __name__ == '__main__':
     ExamSchema(only=('title', 'description')).load(request.get_json())
